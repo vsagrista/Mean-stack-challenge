@@ -2,8 +2,8 @@
   <div class="col-sm-6" ng-repeat="alert in alerts">
     <div class="row">
       <div class="col-xs-2">
-        <h1>
-          <button class="{{ alert.color }}">
+        <h1 class="pull-right">
+          <button ng-class="alert.color">
             <i ng-class="alert.icon"></i>
           </button>
         </h1>
