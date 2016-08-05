@@ -12,6 +12,62 @@
             <p class="help-block error-text" ng-message="required">Customer name is required.</p>
           </div>
         </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="LastName">Last Name</label>
+          <input name="lastName" type="text" ng-model="vm.customer.lastName" id="lastName" class="form-control" placeholder="Last Name" required>
+          <div ng-messages="vm.form.customerForm.lastName.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Last name is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="suburb">Suburb</label>
+          <input name="suburb" type="text" ng-model="vm.customer.suburb" id="suburb" class="form-control" placeholder="Last Name" required>
+          <div ng-messages="vm.form.customerForm.suburb.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Last name is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="country">country</label>
+          <input name="country" type="text" ng-model="vm.customer.country" id="country" class="form-control" placeholder="Last Name" required>
+          <div ng-messages="vm.form.customerForm.country.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Last name is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="industry">industry</label>
+          <input name="industry" type="text" ng-model="vm.customer.industry" id="industry" class="form-control" placeholder="Last Name" required>
+          <div ng-messages="vm.form.customerForm.industry.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Last name is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="email">email</label>
+          <input name="email" type="text" ng-model="vm.customer.email" id="email" class="form-control" placeholder="Last Name" required>
+          <div ng-messages="vm.form.customerForm.email.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Last name is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="phone">phone</label>
+          <input name="phone" type="text" ng-model="vm.customer.phone" id="phone" class="form-control" placeholder="Last Name" required>
+          <div ng-messages="vm.form.customerForm.phone.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Last name is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="referred">referred</label>
+          <input name="referred" type="checkbox" ng-model="vm.customer.referred" id="referred" class="form-control" placeholder="Last Name" required>
+          <div ng-messages="vm.form.customerForm.referred.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Last name is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="channel">channel</label>
+          <input name="channel" type="text" ng-model="vm.customer.channel" id="channel" class="form-control" placeholder="Last Name">
+          <div ng-messages="vm.form.customerForm.channel.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Last name is required.</p>
+          </div>
+        </div>
         <div class="form-group">
           <button type="submit" class="btn btn-default">{{vm.customer._id ? 'Update' : 'Create'}}</button>
         </div>

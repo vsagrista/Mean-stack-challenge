@@ -10,7 +10,6 @@
 
   function CustomersController ($scope, $state, Authentication, customer) {
     var vm = this;
-
     vm.authentication = Authentication;
     vm.customer = customer;
     vm.error = null;
@@ -40,6 +39,7 @@
       }
 
       function successCallback(res) {
+        console.log('customer: ', vm.customer);
         $state.go('customers.view', {
           customerId: res._id
         });
