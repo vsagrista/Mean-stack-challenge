@@ -23,7 +23,7 @@
 
   <div class="list-group">
     <a data-ng-repeat="customer in vm.customers | filter:searchText"
-       data-ui-sref="customers.view({ customerId: customer._id })"
+       href ng-click="vm.modalUpdate('lg', customer)"
        class="list-group-item">
       <small class="list-group-item-text">
         Posted on
