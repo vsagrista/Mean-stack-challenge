@@ -2,13 +2,32 @@
   <div class="page-header">
     <h1>Customers</h1>
   </div>
+  
+<div class="row">
+<!--   Search Bar  -->  
+  <div class="col-xs-12 col-sm-8 text-center"> 
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for a costumer" ng-model="searchText">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Go!</button>
+        </span>
+      </div><!-- /input-group -->
+  </div>
+<!-- New costumer button -->
+  <div class="col-xs-12 col-sm-4 text-center"> 
+    <button class="btn btn-success" type="button">
+    <i class="glyphicon glyphicon-user"></i><br>New Costumer</button>
+  </div>
+</div>
+
+
   <div class="list-group">
-    <a data-ng-repeat="customer in vm.customers"
+    <a data-ng-repeat="customer in vm.customers | filter:searchText"
        data-ui-sref="customers.view({ customerId: customer._id })"
        class="list-group-item">
       <small class="list-group-item-text">
         Posted on
-        <span data-ng-bind="customer.created | date:'mediumDate'"></span>
+        <span data-ng-bind="customer.created | date:'shortDate'"></span>
         by
         <span data-ng-if="customer.user" data-ng-bind="customer.user.displayName"></span>
         <span data-ng-if="!customer.user">Deleted User</span>
